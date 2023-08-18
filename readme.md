@@ -15,63 +15,77 @@ Update the `3-music-collection.js` file to do the following:
 
 ### Required Features
 
-- Create a variable `collection` that starts as an empty array.
+- Beneath the `primesCollection`, create a variable `myCollection` that starts as an empty array.
+  - Please do not modify the `primesCollection` variable in any way.
 
-- Add a function named `addToCollection`. This function should:
-  - Take in the album's `title`, `artist`, `yearPublished` as input parameters
-  - Create a new object having the above properties
-  - Add the new object to the end of the `collection` array
-  - Return the newly created object
+- Create a function named `addToCollection`. It should have this basic structure:
+  - ```js
+      function addToCollection(collection, title, artist, yearPublished) {
+        // your code here...
+      }
+    ```
+  - This function should:
+    - Take in a `collection` parameter, so that this function can be used to search *either collection*
+    - Take in the album's `title`, `artist`, `yearPublished` as input parameters
+    - Create a new object having the above properties
+      - *NOTE*: Your object's properties **must** by `title`, `artist`, and `yearPublished` in order for this assignment's automated tests to work correctly!
+    - Add the new object to the end of the `collection` array
+    - `return` the newly created object
 
 - Test the `addToCollection` function:
-  - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-  - Console.log each album as added using the returned value.
+  - Add 6 albums to **your** collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
+  - `console.log`` each album as added using the function's returned value.
   - After all are added, console.log the `collection` array.
 
-- Add a function named `showCollection`. This function should:
-  - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
-  - Console.log the number of items in the array.
-  - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
+- Create a function named `showCollection`. This function should:
+  - Take in a `collection` parameter. (This allows it to be reused to show any array of album objects!)
+  - Loop over the `collection` and `console.log` each album's information formatted **within a single string**, like: `TITLE by ARTIST, published in YEAR`.
 
 - Test the `showCollection` function.
 
 - Add a function named `findByArtist`. This function should:
-  - Take in `artist` (a string) parameter
-  - Create an array to hold any results, empty to start
-  - Loop through the `collection` and add any objects with a matching artist to the array.
-  - Return the array with the matching results. If no results are found, return an empty array.
+  - Take in a `collection` parameter.
+  - Take in an `artist` (string) parameter
+  - Create an emptry array to hold any matching results, if any
+  - Loop through the `collection` and add any album objects with a matching artist to the array.
+  - Return the array with the matching results. (If no results are found, an empty array should be returned.)
 
-- Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+- Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are returned.
 
 > When testing your functions, write all tests in the JavaScript file!
 
 
-### Stretch goals
+### Stretch Goal
 
-- Create a function called `search`. This function should:
-  - Take an input parameter for a search criteria object. Create your solution based on a search object that has these properties:
-  ```
-  { artist: 'Ray Charles', year: 1957 }
-  ```
+- Create a function called `search` that will allow for searching by `artist` **and** `year`. This function should:
+  - Take in a `collection` parameter.
+  - Take in a `searchCriteria` parameter. Create your solution based on a *search object* that has these properties:
+    - ```
+      { artist: 'Ray Charles', year: 1957 }
+      ```
   - The returned output from `search` should meet these requirements:
-    - Return a new array of all items in the `collection` matching *all* of the search criteria.
+    - Return a new array of all items in the `collection` matching **all** of the search criteria.
     - If no results are found, return an empty array.
-    - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
+    - If there is no search object, an empty search object, or missing `artist`/`year` data provided as input, `return` **all albums** from the `collection` being searched.
 
-- Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
+### Extra Stretchy Stretch Goals
+
+- **NOTE**: The following stretch goals **do not have tests** associated with them.
+  - This means it's even more important to use *your own `console.log` skills* to verify that your code behaves as you expect.
+- Add an array of `tracks` to each of your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
   - Update the `addToCollection` function to also take an input parameter for the array of tracks.
-  - Update `search` to allow a `trackName` search criteria. 
-    - IF the search object has a `trackName` property, only search for that, ignoring any `artist` or `year` properties.
   - Update the `showCollection` function to display the list of tracks for each album with its name and duration.
-```
+  - ```
     TITLE by ARTIST, published in YEAR:
-    1. NAME: DURATION
-    2. NAME: DURATION
-    3. NAME: DURATION
+        1. NAME: DURATION
+        2. NAME: DURATION
+        3. NAME: DURATION
     TITLE by ARTIST, published in YEAR:
-    1. NAME: DURATION
-    2. NAME: DURATION
-```
+        1. NAME: DURATION
+        2. NAME: DURATION
+    ```
+  - Update `search` to allow an optional `trackName` search criteria. 
+    - IF the search object has a `trackName` property, only search for that, *ignoring* any `artist` or `year` properties.
 
 > Make sure to test all your code!
 
