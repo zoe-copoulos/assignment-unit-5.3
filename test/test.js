@@ -5,6 +5,34 @@
 let assert, expect;
 let testItems = {};
 
+let primesCollection = [
+  {
+    artist: 'Hiroshi Yoshimura',
+    title: 'Music For Nine Post Cards',
+    yearPublished: 1982
+  },
+  {
+    artist: 'Clifford Brown and Max Roach',
+    title: 'Study in Brown',
+    yearPublished: 1955
+  },
+  {
+    artist: 'Hiroshi Yoshimura',
+    title: 'Green',
+    yearPublished: 1986
+  },
+  {
+    artist: 'Cécile McLorin Salvant',
+    title: 'Ghost Song',
+    yearPublished: 2022
+  },
+  {
+    artist: 'Wilco',
+    title: 'Yankee Hotel Foxtrot',
+    yearPublished: 2002
+  },
+];
+
 if (typeof window === 'object') {
     // Run tests in the browser
     assert = chai.assert;
@@ -17,14 +45,17 @@ if (typeof window === 'object') {
         findByArtist: typeof findByArtist !== 'undefined' ? findByArtist : undefined,
         search: typeof search !== 'undefined' ? search : undefined,
         // Variables to test
-        primesCollection: typeof primesCollection !== 'undefined' ? primesCollection : undefined,
+        primesCollection,
         myCollection: typeof myCollection !== 'undefined' ? myCollection : undefined,
     };
 } else {
     // Run tests in Node.js
     assert = require('assert');
     expect = require('chai').expect;
-    testItems = require('../assignment/scripts/3-music-collection.js');
+    testItems = {
+        ...require('../assignment/scripts/3-music-collection.js'),
+        primesCollection
+    };
 }
 
 describe('Automated tests', function() {

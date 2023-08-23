@@ -25,14 +25,14 @@ Update the `3-music-collection.js` file to do the following:
       }
     ```
   - This function should:
-    - Take in a `collection` parameter, so that this function can be used to search *either collection*
+    - Take in a `collection` parameter, so that this function can be used to add to *either collection*
     - Take in the album's `title`, `artist`, `yearPublished` as input parameters
     - Create a new object having the above properties
-      - *NOTE*: Your object's properties **must** by `title`, `artist`, and `yearPublished` in order for this assignment's automated tests to work correctly!
+      - *NOTE*: Your object's properties **must** have `title`, `artist`, and `yearPublished` in order for this assignment's automated tests to work correctly!
     - Add the new object to the end of the `collection` array
     - `return` the newly created object
 
-- Test the `addToCollection` function:
+- Use and Test the `addToCollection` function:
   - Add 6 albums to **your** collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
   - `console.log`` each album as added using the function's returned value.
   - After all are added, console.log the `collection` array.
@@ -44,9 +44,9 @@ Update the `3-music-collection.js` file to do the following:
 - Test the `showCollection` function.
 
 - Add a function named `findByArtist`. This function should:
-  - Take in a `collection` parameter.
+  - Take in a `collection` parameter. Remember, we want to be able to search any collection!
   - Take in an `artist` (string) parameter
-  - Create an emptry array to hold any matching results, if any
+  - Create an empty array to hold any matching results, if any
   - Loop through the `collection` and add any album objects with a matching artist to the array.
   - Return the array with the matching results. (If no results are found, an empty array should be returned.)
 
