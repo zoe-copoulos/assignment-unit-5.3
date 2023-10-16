@@ -15,9 +15,6 @@ Update the `3-music-collection.js` file to do the following:
 
 ### Required Features
 
-- Beneath the `primesCollection`, create a variable `myCollection` that starts as an empty array.
-  - Please do not modify the `primesCollection` variable in any way.
-
 - Create a function named `addToCollection`. It should have this basic structure:
   - ```js
       function addToCollection(collection, title, artist, yearPublished) {
