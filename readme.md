@@ -15,6 +15,8 @@ Update the `3-music-collection.js` file to do the following:
 
 ### Required Features
 
+- Create an empty array named `myCollection`.
+
 - Create a function named `addToCollection`. It should have this basic structure:
   - ```js
       function addToCollection(collection, title, artist, yearPublished) {
@@ -22,28 +24,28 @@ Update the `3-music-collection.js` file to do the following:
       }
     ```
   - This function should:
-    - Take in a `collection` parameter, so that this function can be used to add to *either collection*
-    - Take in the album's `title`, `artist`, `yearPublished` as input parameters
-    - Create a new object having the above properties
+    - Take in a `collection` parameter. (This allows the function to be reused to add an album to any array of album objects.)
+    - Take in the album's `title`, `artist`, `yearPublished` as parameters.
+    - Create a new object having the above properties.
       - *NOTE*: Your object's properties **must** have `title`, `artist`, and `yearPublished` in order for this assignment's automated tests to work correctly!
-    - Add the new object to the end of the `collection` array
-    - `return` the newly created object
+    - Add the new object to the end of the `collection` array.
+    - `return` the newly created object.
 
 - Use and Test the `addToCollection` function:
-  - Add 6 albums to **your** collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-  - `console.log`` each album as added using the function's returned value.
-  - After all are added, console.log the `collection` array.
+  - Add 6 albums to the `myCollection` array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
+  - `console.log` each album as added using the function's returned value.
+  - After all are added, console.log the `myCollection` array.
 
 - Create a function named `showCollection`. This function should:
-  - Take in a `collection` parameter. (This allows it to be reused to show any array of album objects!)
-  - Loop over the `collection` and `console.log` each album's information formatted **within a single string**, like: `TITLE by ARTIST, published in YEAR`.
+  - Take in a `collection` parameter. (This allows it to be reused to show any array of album objects.)
+  - Loop through the `collection` and `console.log` each album's information formatted **within a single string**, like: `TITLE by ARTIST, published in YEAR`.
 
 - Test the `showCollection` function.
 
 - Add a function named `findByArtist`. This function should:
   - Take in a `collection` parameter. Remember, we want to be able to search any collection!
-  - Take in an `artist` (string) parameter
-  - Create an empty array to hold any matching results, if any
+  - Take in an `artist` (string) parameter.
+  - Create an empty array to hold any matching results, if any.
   - Loop through the `collection` and add any album objects with a matching artist to the array.
   - Return the array with the matching results. (If no results are found, an empty array should be returned.)
 
