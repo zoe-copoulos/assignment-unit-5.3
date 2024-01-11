@@ -213,7 +213,7 @@ describe('Automated tests', function() {
           ]
           expect(search(primesCollection), 'Expect entire collection without search object').to.deep.equal(primesCollection);
           expect(search(primesCollection, {}), 'Expect entire collection with empty search object').to.deep.equal(primesCollection);
-          expect(search(primesCollection, {artist: '', year: 2023}), 'Expect entire collection with empty artist string').to.deep.equal(primesCollection);
+          expect(search(primesCollection, {artist: '', yearPublished: 2023}), 'Expect entire collection with empty artist string').to.deep.equal(primesCollection);
           expect(search(primesCollection, {artist: 'Wilco', yearPublished: 1908}), 'Expect an empty array when searching for a Wilco album from 1908').to.be.an('array').that.is.empty;
           expect(search(primesCollection, {artist: 'Wilco', yearPublished: 2002})).to.deep.equal(wilcoResults);
           expect(search(primesCollection, {artist: 'Hiroshi Yoshimura', yearPublished: 1986})).to.deep.equal(hiroshiResults);
