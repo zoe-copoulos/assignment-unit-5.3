@@ -1,6 +1,6 @@
 # Unit 5, Part 3: Music Collection
 
-This unit, we'll be exploring objects by creating an application to help maintain a record collection. We will be creating objects using `object literal` syntax.
+This unit, we'll be exploring objects by creating an application to help maintain a record collection. We will be creating objects using [object literal](https://www.tektutorialshub.com/javascript/object-literal-in-javascript/) syntax.
 
 ## Topics Covered
 
@@ -26,7 +26,7 @@ Update the `3-music-collection.js` file to do the following:
   ```
 
   - This function should:
-    - Take in a `collection` parameter. (This allows the function to be reused to add an album to any array of album objects.)
+    - Take in a `collection` parameter. (This allows the function to be reused to add an album to any array of album objects).
     - Take in the album's `title`, `artist`, `yearPublished` as parameters.
     - Create a new object having the above properties.
       - *NOTE*: Your object's properties **must** have `title`, `artist`, and `yearPublished` in order for this assignment's automated tests to work correctly!
@@ -34,7 +34,7 @@ Update the `3-music-collection.js` file to do the following:
     - `return` the newly created object.
 
 - [ ] Use and Test the `addToCollection` function:
-  - Add 6 albums to the `myCollection` array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
+  - Add 6 albums to the `myCollection` array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way).
   - `console.log` each album as added using the function's returned value.
   - After all are added, console.log the `myCollection` array.
 
@@ -42,14 +42,14 @@ Update the `3-music-collection.js` file to do the following:
   - Take in a `collection` parameter. (This allows it to be reused to show any array of album objects).
   - Loop through the `collection` and `console.log` each album's information formatted **within a single string**, like: `TITLE by ARTIST, published in YEARPUBLISHED`.
 
-- [ ] Test the `showCollection` function
+- [ ] Test the `showCollection` function.
 
 - [ ] Add a function named `findByArtist`. This function should:
   - Take in a `collection` parameter. Remember, we want to be able to search any collection!
   - Take in an `artist` (string) parameter.
   - Create an empty array to hold any matching results, if any.
   - Loop through the `collection` and add any album objects with a matching artist to the array.
-  - Return the array with the matching results. (If no results are found, an empty array should be returned.)
+  - Return the array with the matching results. (If no results are found, an empty array should be returned).
 
 - [ ] Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are returned.
 
@@ -72,8 +72,7 @@ Update the `3-music-collection.js` file to do the following:
 
 ### Extra Stretchy Stretch Goals
 
-**NOTE**: The following stretch goals **do not have tests** associated with them.
-This means it's even more important to use *your own `console.log` skills* to verify that your code behaves as you expect.
+**NOTE**: The following stretch goals **do not have tests** associated with them. This means it's even more important to use *your own `console.log` skills* to verify that your code behaves as you expect.
 
 - [ ] Add an array of `tracks` to each of your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
   - Update the `addToCollection` function to also take an input parameter for the array of tracks.
