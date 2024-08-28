@@ -6,6 +6,8 @@ const {
     EVENT_RUN_END,
     EVENT_TEST_FAIL,
     EVENT_TEST_PASS,
+    EVENT_TEST_PENDING
+    
 } = Mocha.Runner.constants;
 
 // Custom output to match our rubric
@@ -26,6 +28,16 @@ class MyReporter {
                 console.log(
                     `\x1b[31m`,
                     `| ${test.parent.title} | no, see note ${errors.length} |`,
+                    `\x1b[0m`
+                );
+            })
+            .on(EVENT_TEST_PENDING, (test, err) => {
+                if (test.parent.title.includes('STRETCH')) {
+                    stretchGoalsLoggedToOutput++;
+                }
+                console.log(
+                    `\x1b[33m`,
+                    `| ${test.parent.title} | skipped |`,
                     `\x1b[0m`
                 );
             })
