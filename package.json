@@ -10,8 +10,8 @@
     "test": "mocha --reporter test/reporter.js"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "chai": "^4.4.1",
+    "mocha": "^10.3.0"
   },
   "author": "Prime Digital Academy",
   "license": "ISC"
