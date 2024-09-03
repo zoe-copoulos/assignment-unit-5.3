@@ -103,7 +103,7 @@ describe('Automated tests', function() {
 
                     if (args.length > 1) {
                         logs.push( args.reduce((acc = '', item) => acc += item) );
-                    } else if (rest.length === 1) {
+                    } else if (args.length === 1) {
                         logs.push(args);
 
                     }
